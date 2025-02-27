@@ -7,8 +7,7 @@ class OrderItemSerializer(serializers.ModelSerializer):
         fields = ['product', 'quantity']
 
 class OrderSerializer(serializers.ModelSerializer):
-    items = OrderItemSerializer(many=True, write_only=True)  # Para recibir los productos en la solicitud
-
+    items = OrderItemSerializer(many=True, write_only=True)  
     class Meta:
         model = Order
         fields = ['id', 'user', 'items', 'total_price', 'status', 'created_at']

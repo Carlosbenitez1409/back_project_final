@@ -1,6 +1,6 @@
 from django.db import models
 from django.conf import settings
-from products.models import Product  # Asegúrate de importar el modelo de productos
+from products.models import Product  
 
 class Order(models.Model):
     
